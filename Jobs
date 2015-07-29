@@ -1,0 +1,137 @@
+MAFIA = DarkRP.createJob("Mafia Member", {
+   color = Color(7, 7, 7, 255),
+   model = {""models/player/pd2_chains_p.mdl",  "models/player/pd2_dallas_p.mdl, models/player/pd2_hoxton_p.mdl""},
+   description = [[You are a member of the crime syndicate. Kill, steal, and do whatever it takes to get to the top of the chain, and listen to your bosses' orders.]],
+   weapons = {"weapon_fists"},
+   command = "mafia",
+   max = 5,
+   salary = 65,
+   admin = 0,
+   vote = false,
+   hasLicense = false,
+   candemote = true,
+   -- CustomCheck
+   medic = false,
+   chief = false,
+   mayor = false,
+   hobo = false,
+   cook = false,
+   category = "Mafia",
+})
+
+MAFIA = DarkRP.createJob("Mafia Boss", {
+   color = Color(7, 7, 7, 255),
+   model = {"models/gman_high.mdl"},
+   description = [[You are the leader of the crime syndicate. Give your subordinates orders, and carry them out swiftly.]],
+   weapons = {"m9k_colt1911", "unarrest_stick"},
+   command = "mafiaboss",
+   max = 1,
+   salary = 65,
+   admin = 0,
+   vote = true,
+   hasLicense = false,
+   candemote = true,
+   -- CustomCheck
+   medic = false,
+   chief = false,
+   mayor = false,
+   hobo = false,
+   cook = false,
+   category = "Mafia",
+})
+
+MAFIA = DarkRP.createJob("VIP Joker", {
+   color = Color(7, 7, 7, 255),
+   model = {"models/player/slow/jamis/mkvsdcu/joker/slow_pub.mdl"},
+   description = [[You're a crazed maniac who thrives on making Batman's life miserable. Go crazy.]],
+   weapons = {"m9k_usp", "m9k_knife", "weapon_fists"},
+   command = "joker",
+   max = 1,
+   salary = 75,
+   admin = 0,
+   vote = false,
+   hasLicense = true,
+   candemote = false,
+   -- CustomCheck
+   medic = false,
+   chief = false,
+   mayor = false,
+   hobo = false,
+   cook = false,
+   category = "Mafia",
+   customCheck = function(ply)
+             return ply:IsUserGroup("VIP")
+			 end
+})
+
+MAFIA = DarkRP.createJob("VIP Harley Quinn", {
+   color = Color(249, 0, 0, 255),
+   model = {"models/jessev92/harley_quinn_aa_ply.mdl"},
+   description = [[You are in love with the Crazy Joker and follow him around. Steal, kill, and have fun!]],
+   weapons = {"m9k_mp9", "m9k_machete"},
+   command = "harley",
+   max = 1,
+   salary = 75,
+   admin = 0,
+   vote = false,
+   hasLicense = false,
+   candemote = false,
+   -- CustomCheck
+   medic = false,
+   chief = false,
+   mayor = false,
+   hobo = false,
+   cook = false,
+   category = "Mafia",
+   customCheck = function(ply)
+             return ply:IsUserGroup("VIP")
+			 end
+})
+
+MAFIA = DarkRP.createJob("VIP Batman", {
+   color = Color(255, 255, 255, 255),
+   model = {"models/player/superheroes/batman.mdl"},
+   description = [[Fight crime as gotham's savior.]],
+   weapons = {"m9k_knife", "spiderman's_swep", "weapon_fists", "unarrest_stick"},
+   command = "batman",
+   max = 1,
+   salary = 85,
+   admin = 0,
+   vote = false,
+   hasLicense = true,
+   candemote = false,
+   -- CustomCheck
+   medic = false,
+   chief = false,
+   mayor = false,
+   hobo = false,
+   cook = false,
+   category = "Mafia",
+   customCheck = function(ply)
+             return ply:IsUserGroup("VIP")
+			 end
+})
+
+MAFIA = DarkRP.createJob("Pro Thief", {
+   color = Color(147, 147, 147, 255),
+   model = {"models/code_gs/robber/robberplayer.mdl"},
+   description = [[You are a member of the crime syndicate. Kill, steal, and do whatever it takes to get to the top of the chain, and listen to your bosses' orders.]],
+   weapons = {"m9k_colt1911", "unarrest_stick", ""},
+   command = "prothief",
+   max = 2,
+   salary = 65,
+   admin = 0,
+   vote = false,
+   hasLicense = false,
+   candemote = false,
+   -- CustomCheck
+   medic = false,
+   chief = false,
+   mayor = false,
+   hobo = false,
+   cook = false,
+   category = "Mafia",
+   customCheck = function(ply)
+             return ply:IsUserGroup("VIP")
+			 end
+})
